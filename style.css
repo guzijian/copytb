@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    border:1px solid blue;
+   
 }
 html{
     overflow-x: hidden;
@@ -9,6 +9,18 @@ body{
     margin: 0;
    background-color: #F4F4F4;
 }
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.topheader,.topnav,main,.botton,.foot{
+    margin: 0 auto;
+    max-width: 1190px;
+}
+
+
 .rightnav{
     position: absolute;
     top:513.8px;
@@ -18,18 +30,202 @@ body{
     height: 436px;
 }
 
-nav{
-    height: 35px;
-    background-color: #f5f5f5;
-}
-.topheader,.topnav,main,.botton,.foot{
-    margin: 0 auto;
-    max-width: 1190px;
-}
-header{
+.search{
     height: 121px;
     background-color: white;
 }
+.searchCha{
+    position: fixed;
+    height: 54px;
+    width: 100%;
+    margin-top: 0;
+    z-index: 100;
+    top: 0;
+}
+/*搜索栏 右导航栏*/
+@font-face {
+    font-family: 'iconfont1';
+    src: url('./images/font_2gqy0ghw9mo/iconfont.eot');
+    src: url('./images/font_2gqy0ghw9mo/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('./images/font_2gqy0ghw9mo/iconfont.woff2') format('woff2'),
+        url('./images/font_2gqy0ghw9mo/iconfont.woff') format('woff'),
+        url('./images/font_2gqy0ghw9mo/iconfont.ttf') format('truetype'),
+        url('./images/font_2gqy0ghw9mo/iconfont.svg#iconfont') format('svg');
+  }
+  
+.font1{
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    color: #3C3C3C;
+}
+.font2{
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    color: #F2431E;
+}
+.font3{
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    color: #787876;
+}
+.font3:hover{
+    color: #FF5000;
+}
+/*字体*/
+.location:hover,.mytb:hover,.myfav:hover,.qinniu:hover,.service:hover,.webnav:hover{
+    background-color: white;
+    border-left: 1px solid #E1E1E2;
+    border-right: 1px solid #E1E1E2;
+}
+nav{
+    height: 35.8px;
+    background-color: #f5f5f5;
+}
+.topnav{
+    display: flex;
+    justify-content:space-between;
+}
+.navleft{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 30px;
+}
+.location{
+    width: 79px;
+    height: 35px;
+  
+}
+
+.drop-down-box{
+    position: absolute;
+    z-index: 999;
+    display: none;
+    padding-top: 0;
+    margin-top: 5px;
+    margin-left: -1px;
+}
+.drop-down-list{
+    padding: 0;
+    background-color: white;
+    width: 268.4px;
+    height: 278.6px;
+    overflow-y: scroll;
+    border-left: 1px solid #E1E1E2;
+    border-right: 1px solid #E1E1E2;
+    border-bottom: 1px solid #E1E1E2;
+}
+
+.drop-down-list li{
+    text-align: left;
+    padding-left: 8px;
+    width: 250px;
+    height: 29px;
+    line-height: 29px;
+}
+.drop-down-list li:hover{
+background-color: #f5f5f5;
+}
+.navicon img{
+    margin-left: 5px;
+   position: relative;
+   top: 0;
+}
+.login-register{
+width: 134px;
+height: 35px;
+}
+.phone{
+    width: 79px;
+    height: 35px;
+}
+.navright{
+   display: flex;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 30px;
+}
+.mytb{
+width: 79px;
+height: 35px;
+}
+.drop-down-tb{
+    position: absolute;
+    z-index: 999;
+    display: none;
+    padding-top: 0;
+    margin-top: 5px;
+    margin-left: -1px;
+}
+.down-list-tb{
+    margin: 0;
+    padding-top: 5px;
+    background-color: white;
+    width: 83.6px;
+    height: 73.6px;
+    border-left: 1px solid #E1E1E2;
+    border-right: 1px solid #E1E1E2;
+    border-bottom: 1px solid #E1E1E2;
+}
+.down-list-tb li{
+    text-align: left;
+    line-height: 28px;
+    width: 82px;
+    height: 28px;
+}
+.down-list-tb li:hover{
+    background-color: #f5f5f5;
+  
+}
+.myct{
+width: 84px;
+height: 35px;
+}
+.cart img{
+    position: relative;
+    top: 3px;
+}
+.myfav{
+width: 84px;
+height: 35px;
+}
+.favorite {
+    font-family: "iconfont1";
+    font-size: 12px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
+.category{
+    width: 67px;
+    height: 35px;
+}
+.separator{
+    width: 14.8px;
+    height: 35px;
+    color: #ddd;
+}
+.qianniu{
+    width: 103px;
+    height: 35px;
+}
+.service{
+    width: 79px;
+    height: 35px;
+}
+.webnav{
+    width: 96px;
+    height: 35px;
+}
+.navmenu img{
+    margin-left: 5px;
+    position: relative;
+    top: 0;
+}
+/*导航栏*/
+
 
 main{
     background-color: #F4F4F4;

@@ -36,4 +36,40 @@
    mytb[0].onmouseout = function(){
      dropDownTb[0].style.display = "none";
    };
+
+   const myfav = document.getElementsByClassName('myfav');
+   const listCate = document.getElementsByClassName('list-cate');
+   myfav[0].onmouseover = function(){
+    listCate[0].style.display = "block";
+   };
+   myfav[0].onmouseout = function(){
+    listCate[0].style.display = "none";
+   };
+   
+   const qinniu = document.getElementsByClassName('qinniu');
+   const listQn = document.getElementsByClassName('list-qn');
+   qinniu[0].onmouseover = function(){
+    listQn[0].style.display = "block";
+   };
+   qinniu[0].onmouseout = function(){
+    listQn[0].style.display = "none";
+   };
+
+   const service = document.getElementsByClassName('service');
+   const listSer = document.getElementsByClassName('list-ser');
+   service[0].onmouseover = function(){
+    listSer[0].style.display = "block";
+   };
+   service[0].onmouseout = function(){
+    listSer[0].style.display = "none";
+   };
+
+   const webnav = document.getElementsByClassName('webnav');
+   const webnav1 = document.getElementsByClassName('webnav1');
+   webnav[0].onmouseover = function(){
+    webnav1[0].style.display = "block";
+   };
+   webnav[0].onmouseout = function(){
+    webnav1[0].style.display = "none";
+   };
 }

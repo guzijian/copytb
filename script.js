@@ -46,12 +46,12 @@
     listCate[0].style.display = "none";
    };
    
-   const qinniu = document.getElementsByClassName('qinniu');
+   const qianniu = document.getElementsByClassName('qianniu');
    const listQn = document.getElementsByClassName('list-qn');
-   qinniu[0].onmouseover = function(){
+   qianniu[0].onmouseover = function(){
     listQn[0].style.display = "block";
    };
-   qinniu[0].onmouseout = function(){
+   qianniu[0].onmouseout = function(){
     listQn[0].style.display = "none";
    };
 

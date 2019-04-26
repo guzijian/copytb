@@ -34,6 +34,14 @@ a{
     height: 121px;
     background-color: white;
 }
+.logo-bd{
+    padding-top: 10px;
+    padding-left: 22px;
+}
+.logo-td{
+    display: none;
+    margin-top: -14px;
+}
 .searchCha{
     position: fixed;
     height: 54px;
@@ -41,6 +49,45 @@ a{
     margin-top: 0;
     z-index: 100;
     top: 0;
+}
+.topheader{
+    display: flex;
+}
+.SearchTabBox{
+    min-width: 610px;
+    height: 22px;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 100px;
+}
+.searcha{
+   margin-left: 5px;
+   padding-top: 2px;
+   cursor: pointer;
+   font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    color:#F40;
+    text-align: center;
+    width: 36px;
+    height: 22px;
+}
+.searcha:hover{
+    
+    background-color: #ffeee5;
+}
+.searchb{
+    margin-left: 5px;
+    padding-top: 2px;
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF;
+    background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    background-repeat: repeat-x;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    width: 36px;
+    height: 22px;
+    cursor: pointer;
 }
 /*搜索栏 右导航栏*/
 @font-face {
@@ -67,6 +114,9 @@ a{
 }
 .font3:hover{
     color: #FF5000;
+}
+.font4{
+    
 }
 /*字体*/
 .location:hover,.mytb:hover,.myfav:hover,.qianniu:hover,.service:hover,.webnav:hover{
@@ -144,6 +194,9 @@ height: 35px;
     padding: 0;
     text-align: center;
     line-height: 30px;
+}
+.navright a{
+    padding-left: 4px;
 }
 .mytb{
 width: 79px;
@@ -233,10 +286,10 @@ height: 35px;
     height: 35px;
 }
 .separator{
-    margin-right: 5px;
     width: 14.8px;
     height: 35px;
     color: #ddd;
+    font-size: 12px;
 }
 .qianniu{
     width: 103px;

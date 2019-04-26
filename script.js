@@ -2,11 +2,17 @@
     window.onscroll = function(){
     const obj = document.getElementsByClassName('rightnav');
     const search = document.getElementsByClassName('search');
+    const logoTd = document.getElementsByClassName('logo-td');
+    const logoBd = document.getElementsByClassName('logo-bd');
     const toscrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if(toscrollTop >= 156.8){
         search[0].classList.add('searchCha');
+        logoTd[0].style.display = "block";
+        logoBd[0].style.display = "none";
     }else{
         search[0].classList.remove('searchCha');
+        logoTd[0].style.display = "none";
+        logoBd[0].style.display = "block";
     };
 
     if(toscrollTop >= 438.8){
@@ -17,8 +23,29 @@
         obj[0].style.top = '513.8px';
     };
     }
+   
    /*搜索栏 右侧栏*/
+
    window.onload= function () {
+    const searchbb = document.getElementById("searchbb");
+    const searchtm = document.getElementById("searchtm");
+    const searchdp = document.getElementById("searchdp");
+   searchbb.onclick = function(){
+    searchbb.setAttribute("class","searchb");
+    searchtm.setAttribute("class","searcha");
+    searchdp.setAttribute("class","searcha");
+   };
+   searchtm.onclick = function(){
+    searchbb.setAttribute("class","searcha");
+    searchtm.setAttribute("class","searchb");
+    searchdp.setAttribute("class","searcha");
+   };
+   searchdp.onclick = function(){
+    searchbb.setAttribute("class","searcha");
+    searchtm.setAttribute("class","searcha");
+    searchdp.setAttribute("class","searchb");
+   };/*搜索栏*/
+
     const location = document.getElementsByClassName('location');
     const dropDownBox = document.getElementsByClassName('drop-down-box')
     location[0].onmouseover=function(){

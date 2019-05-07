@@ -41,6 +41,7 @@ a{
 .logo-td{
     display: none;
     margin-top: -14px;
+    margin-right: 90px;
 }
 .searchCha{
     position: fixed;
@@ -49,17 +50,81 @@ a{
     margin-top: 0;
     z-index: 100;
     top: 0;
+    background-color: white;
+    overflow: hidden;
 }
 .topheader{
     display: flex;
 }
-.SearchTabBox{
+form{
+    display: flex;
+    margin-top: -3px;
+}
+.SearchTabBox ul{
     min-width: 610px;
     height: 22px;
     display: flex;
-    padding-top: 10px;
+    padding-top: 7px;
     padding-left: 100px;
 }
+.naviconn,.sline{
+    display: none;
+}
+.SearchTabBox1 ul{
+
+}
+#searchbb1{
+    z-index: 2;
+    position: absolute;
+left: 382px;
+top:7px;
+line-height: 35px;
+    width: 74px;
+    height: 39px;
+    background-color: #F4F4F4;
+border-top-left-radius: 18px;
+border-bottom-left-radius: 18px;
+border-left: 2px solid #FF5000;
+border-top: 2px solid #FF5000;
+border-bottom: 2px solid #FF5000;
+}
+
+#searchtm1{
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    left: 382px;
+    line-height: 5.5;
+    background-color: #F4F4F4;
+    width: 74px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+}
+.sline{
+    position: absolute;
+bottom: 3px;
+left: 7px;
+width: 60px;
+height: 1px;
+background: #ffa4a4;
+z-index: 1;
+}
+#searchdp1{
+    z-index: 1;
+    position: absolute;
+    line-height: 3;
+    top: 80px;
+    left: 377px;
+    background-color: #F4F4F4;
+    width: 74px;
+    height: 40px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+    display: none;
+}
+
 .searcha{
    margin-left: 5px;
    padding-top: 2px;
@@ -70,7 +135,7 @@ a{
     width: 36px;
     height: 22px;
 }
-.searcha:hover{
+.searcha:hover,.searchal:hover{
     
     background-color: #ffeee5;
 }
@@ -88,6 +153,129 @@ a{
     width: 36px;
     height: 22px;
     cursor: pointer;
+}
+
+.searcha1,.searcha11{
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    color: #3C3C3C;
+    text-align: center;
+    line-height: 40px;
+}
+.searcha1:hover,.searcha11:hover{
+    color: #ff5400;
+    font-weight: 800;
+}
+.searchb1{
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    color: #3C3C3C;
+    text-align: center;
+    line-height: 40px;
+}
+.laname{
+    position: absolute;
+    display: flex;
+    color:#A5A5A5;
+    font-size: 12px;
+}
+.lanamem{
+    position: absolute;
+    display: flex;
+    color:#A5A5A5;
+    font-size: 12px;
+    padding-left: 0;
+    padding-top: 7px;
+}
+#laname11{
+    padding-left: 170px;
+    padding-top: 5px;
+    }
+   
+#laname1{
+padding-left: 100px;
+padding-top: 5px;
+}
+#laname2{
+    padding-left: 10px;
+    padding-top: 5px;
+}
+#laname3{
+    padding-top: 1px;
+    padding-left: 390px;
+}
+#name{
+    min-width: 551.4px;
+    height: 39.2px;
+    border: 2px solid #FF5000;
+    border-top-left-radius:18px;
+    border-bottom-left-radius:18px;
+    margin-left: 85px;
+    margin-top: -6px;
+    padding-left: 10px;
+    padding-right: 79.4px;
+}
+.hotsfline1{
+    display: flex;
+    width: 589px;
+    height: 18px;
+    margin-left: 85px;
+    margin-top: 5px;
+}
+.hotsfline1 a{
+    color: #505050;
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    padding-right: 5px;
+}
+.hotsfline1 a:hover{
+    color: #FF5000;
+}
+.hotsfline1 .h{
+    color:#FF5000;
+}
+.sbutton{
+    position: relative;
+    margin-top: -6px;
+    cursor: pointer;
+    width: 74px;
+    height: 39.2px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFF;
+    background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    background-repeat: repeat-x;
+    border-top-right-radius:18px;
+    border-bottom-right-radius:18px;
+}
+.QR{
+    cursor: pointer;
+    margin-left: 135px;
+    margin-top: 25px;
+}
+.qr1{
+    position: absolute;
+border: 1px solid #E6F0FA;
+width: 14px;
+height: 14px;
+margin-left: -15px;
+}
+.qr1 img{
+    padding-bottom: 4px;
+}
+.qr2{
+    position: absolute;
+    border: 1px solid #E6F0FA;
+    width: 75.6px;
+    height: 89.6px;
+    padding-left: 6px;
+}
+.qr2 img{
+    width: 62px;
+    height: 62px;
+}
+.qr2 span{
+    color:#FF5000;
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    padding-right: 5px;
 }
 /*搜索栏 右导航栏*/
 @font-face {
@@ -179,6 +367,11 @@ background-color: #f5f5f5;
     margin-left: 5px;
    position: relative;
    top: 0;
+}
+.naviconn img{
+    left: 20px;
+position: relative;
+top: -35px;
 }
 .login-register{
 width: 134px;

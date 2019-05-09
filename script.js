@@ -11,16 +11,26 @@
 
        
         let searchdad = document.getElementById('searchdad');
+        searchdad.children[1].style.display = "none";
+    searchdad.children[2].style.display = "none";
+searchdad.onmouseover = function(){
+    searchdad.children[1].style.display = "block";
+    searchdad.children[2].style.display = "block";
+ };
+ searchdad.onmouseout = function(){
+    searchdad.children[1].style.display = "none";
+    searchdad.children[2].style.display = "none";
+ };
         searchdad.children[0].setAttribute("id",'searchbb1');
         searchdad.children[1].setAttribute("id",'searchtm1');
         searchdad.children[2].setAttribute("id",'searchdp1');
         searchdad.children[0].setAttribute("class","searchb1");
         searchdad.children[1].setAttribute("class","searcha1");
-        searchdad.children[2].setAttribute("class","searcha11");
-
+        searchdad.children[2].setAttribute("class","searcha1");
+        
         let searchbox = document.getElementsByClassName('searchbox');
         searchbox[0].children[0].setAttribute("class",'SearchTabBox1');
-
+       
         let naviconn = document.getElementsByClassName('naviconn');
         naviconn[0].style.display = "block";
 
@@ -41,8 +51,12 @@
 
         let hotsfline = document.getElementsByClassName("hotsfline");
         hotsfline[0].style.display = "none";
+
+        
+
     }else{
 
+        
         let name = document.getElementById('name');
         name.style.paddingLeft = '10px';
 
@@ -51,6 +65,10 @@
 
        
         let searchdad = document.getElementById('searchdad');
+        searchdad.onmouseover = null;
+        searchdad.onmouseout = null;
+        searchdad.children[1].style.display = "block";
+    searchdad.children[2].style.display = "block";
         searchdad.children[0].setAttribute("id",'searchbb');
         searchdad.children[1].setAttribute("id",'searchtm');
         searchdad.children[2].setAttribute("id",'searchdp');
@@ -104,6 +122,7 @@
         obj[0].style.position = 'absolute'; 
         obj[0].style.top = '513.8px';
     };
+
     }
    
    /*搜索栏 右侧栏*/
@@ -183,8 +202,6 @@ searchtm.onclick = function(){
  const sbutton = document.getElementsByClassName("sbutton");
  sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff5000 0,#ff5000 100%)";
  let number =2;
-
- let searchdad = document.getElementById("searchdad");
  searchdad.setAttribute("className",number);
 };//点击天猫
 
@@ -281,15 +298,10 @@ searchdp.onclick = function(){
 //导航栏浮动下拉菜单
 
 let searchdad = document.getElementById('searchdad');
-searchdad.children[0].onmouseover = function(){
-    searchdad.children[1].style.display = "block";
-    searchdad.children[2].style.display = "block";
- };
- searchdad.children[0].onmouseout = function(){
-    searchdad.children[1].style.display = "none";
-    searchdad.children[2].style.display = "none";
- };
+if(searchdad.getAttribute("classn") ==1){
+    console.log("哈哈哈");
 
+};
 }
 
 // localstorage      sessionstorage  页面传值

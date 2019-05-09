@@ -50,7 +50,7 @@ a{
     z-index: 100;
     top: 0;
     background-color: white;
-    overflow: hidden;
+  
 }
 .topheader{
     display: flex;
@@ -114,7 +114,7 @@ z-index: 1;
     position: absolute;
     line-height: 3;
     top: 80px;
-    left: 377px;
+    left: 382px;
     background-color: #F4F4F4;
     width: 74px;
     height: 40px;
@@ -154,13 +154,13 @@ z-index: 1;
     cursor: pointer;
 }
 
-.searcha1,.searcha11{
+.searcha1{
     font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
     color: #3C3C3C;
     text-align: center;
     line-height: 40px;
 }
-.searcha1:hover,.searcha11:hover{
+.searcha1:hover{
     color: #ff5400;
     font-weight: 800;
 }

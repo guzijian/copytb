@@ -7,24 +7,19 @@
         name.style.paddingLeft = '84px';
 
         let laname = document.getElementsByClassName('laname');
-        laname.children[0].setAttribute("id",'laname11');
+        laname[0].children[0].setAttribute("id",'laname11');
 
-        let searchbb = document.getElementById('searchbb');
-        searchbb.setAttribute("id",'searchbb1');
-
-        let searchtm = document.getElementById('searchtm');
-        searchtm.setAttribute("id",'searchtm1');
-
-        let searchdp = document.getElementById('searchdp');
-        searchdp.setAttribute("id",'searchdp1');
-
+       
         let searchdad = document.getElementById('searchdad');
+        searchdad.children[0].setAttribute("id",'searchbb1');
+        searchdad.children[1].setAttribute("id",'searchtm1');
+        searchdad.children[2].setAttribute("id",'searchdp1');
         searchdad.children[0].setAttribute("class","searchb1");
         searchdad.children[1].setAttribute("class","searcha1");
         searchdad.children[2].setAttribute("class","searcha11");
 
-        let SearchTabBox = document.getElementsByClassName('SearchTabBox');
-        SearchTabBox[0].setAttribute("class",'SearchTabBox1');
+        let searchbox = document.getElementsByClassName('searchbox');
+        searchbox[0].children[0].setAttribute("class",'SearchTabBox1');
 
         let naviconn = document.getElementsByClassName('naviconn');
         naviconn[0].style.display = "block";
@@ -32,8 +27,8 @@
         let sline = document.getElementsByClassName('sline');
         sline[0].style.display = "block";
 
-        let search = document.getElementsByClassName('search');
-        search[0].setAttribute("class","searchCha");
+        let searchhead = document.getElementsByTagName('header');
+        searchhead[0].setAttribute("class","searchCha");
 
         let logoTd = document.getElementsByClassName('logo-td');
         logoTd[0].style.display = "block";
@@ -52,18 +47,13 @@
         name.style.paddingLeft = '10px';
 
         let laname = document.getElementsByClassName('laname');
-        laname.children[0].setAttribute("id",'laname1');
+        laname[0].children[0].setAttribute("id",'laname1');
 
-        let searchbb1 = document.getElementById('searchbb1');
-        searchbb1.setAttribute("id",'searchbb');
-
-        let searchtm1 = document.getElementById('searchtm1');
-        searchtm1.setAttribute("id",'searchtm');
-
-        let searchdp1 = document.getElementById('searchdp1');
-        searchdp1.setAttribute("id",'searchdp');
-
+       
         let searchdad = document.getElementById('searchdad');
+        searchdad.children[0].setAttribute("id",'searchbb');
+        searchdad.children[1].setAttribute("id",'searchtm');
+        searchdad.children[2].setAttribute("id",'searchdp');
         if(searchdad.getAttribute("className") ==2){
         searchdad.children[0].setAttribute("class","searcha");
         searchdad.children[1].setAttribute("class","searchb");
@@ -79,11 +69,11 @@
         }//店铺等点击状态保存
 
 
-        let SearchTabBox1 = document.getElementsByClassName('SearchTabBox1');
-        SearchTabBox1[0].setAttribute("class",'SearchTabBox');
+        let searchbox = document.getElementsByClassName('searchbox');
+        searchbox[0].children[0].setAttribute("class",'SearchTabBox');
 
-        let searchCha = document.getElementsByClassName('searchCha');
-        searchCha[0].setAttribute("class",'search');
+        let searchhead = document.getElementsByTagName('header');
+        searchhead[0].setAttribute("class",'search');
 
         let logoTd = document.getElementsByClassName('logo-td');
         logoTd[0].style.display = "none";
@@ -290,19 +280,14 @@ searchdp.onclick = function(){
  };
 //导航栏浮动下拉菜单
 
-
- const searchbb1 = document.getElementById('searchbb1');
- searchbb1.onmouseover = function(){
-    const searchtm1 = document.getElementById('searchtm1');
-    const searchdp1 = document.getElementById('searchdp1');
-     searchtm1.style.display = "block";
-     searchdp1.style.display = "block";
+let searchdad = document.getElementById('searchdad');
+searchdad.children[0].onmouseover = function(){
+    searchdad.children[1].style.display = "block";
+    searchdad.children[2].style.display = "block";
  };
- searchbb1.onmouseout = function(){
-    const searchtm1 = document.getElementById('searchtm1');
-    const searchdp1 = document.getElementById('searchdp1');
-     searchtm1.style.display = "none";
-     searchdp1.style.display = "none";
+ searchdad.children[0].onmouseout = function(){
+    searchdad.children[1].style.display = "none";
+    searchdad.children[2].style.display = "none";
  };
 
 }

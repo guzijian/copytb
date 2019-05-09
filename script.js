@@ -1,67 +1,116 @@
 
     window.onscroll = function(){
-    const name = document.getElementById('name');
-    const laname1 = document.getElementById('laname1');
-    const laname11 = document.getElementById('laname11');
-    const searchdad = document.getElementById('searchdad');
-    const SearchTabBox = document.getElementsByClassName('SearchTabBox');
-    const SearchTabBox1 = document.getElementsByClassName('SearchTabBox1');
-    const searchbb = document.getElementById('searchbb');
-    const searchbb1 = document.getElementById('searchbb1');
-    const searchtm = document.getElementById('searchtm');
-    const searchtm1 = document.getElementById('searchtm1');
-    const searchdp = document.getElementById('searchdp');
-    const searchdp1 = document.getElementById('searchdp1');
-    const sline = document.getElementsByClassName('sline');
-    const naviconn = document.getElementsByClassName('naviconn');
-    const QR = document.getElementsByClassName("QR");
-    const hotsfline = document.getElementsByClassName("hotsfline");
-    const obj = document.getElementsByClassName('rightnav');
-    const search = document.getElementsByClassName('search');
-    const searchCha = document.getElementsByClassName('searchCha');
-    const logoTd = document.getElementsByClassName('logo-td');
-    const logoBd = document.getElementsByClassName('logo-bd');
-    const toscrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+ 
+    let toscrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if(toscrollTop >= 156.8){
+        let name = document.getElementById('name');
         name.style.paddingLeft = '84px';
-        laname1.setAttribute("id",'laname11');
+
+        let laname = document.getElementsByClassName('laname');
+        laname.children[0].setAttribute("id",'laname11');
+
+        let searchbb = document.getElementById('searchbb');
         searchbb.setAttribute("id",'searchbb1');
+
+        let searchtm = document.getElementById('searchtm');
         searchtm.setAttribute("id",'searchtm1');
+
+        let searchdp = document.getElementById('searchdp');
         searchdp.setAttribute("id",'searchdp1');
-        searchdad.children[0].classList.add("searchb1");
-        searchdad.children[1].classList.add("searcha1");
-        searchdad.children[2].classList.add("searcha11");
+
+        let searchdad = document.getElementById('searchdad');
+        searchdad.children[0].setAttribute("class","searchb1");
+        searchdad.children[1].setAttribute("class","searcha1");
+        searchdad.children[2].setAttribute("class","searcha11");
+
+        let SearchTabBox = document.getElementsByClassName('SearchTabBox');
         SearchTabBox[0].setAttribute("class",'SearchTabBox1');
+
+        let naviconn = document.getElementsByClassName('naviconn');
         naviconn[0].style.display = "block";
+
+        let sline = document.getElementsByClassName('sline');
         sline[0].style.display = "block";
+
+        let search = document.getElementsByClassName('search');
         search[0].setAttribute("class","searchCha");
+
+        let logoTd = document.getElementsByClassName('logo-td');
         logoTd[0].style.display = "block";
+
+        let logoBd = document.getElementsByClassName('logo-bd');
         logoBd[0].style.display = "none";
+
+        let QR = document.getElementsByClassName("QR");
         QR[0].style.display = "none";
+
+        let hotsfline = document.getElementsByClassName("hotsfline");
         hotsfline[0].style.display = "none";
     }else{
+
+        let name = document.getElementById('name');
         name.style.paddingLeft = '10px';
-        laname11.setAttribute("id",'laname1');
+
+        let laname = document.getElementsByClassName('laname');
+        laname.children[0].setAttribute("id",'laname1');
+
+        let searchbb1 = document.getElementById('searchbb1');
         searchbb1.setAttribute("id",'searchbb');
+
+        let searchtm1 = document.getElementById('searchtm1');
         searchtm1.setAttribute("id",'searchtm');
+
+        let searchdp1 = document.getElementById('searchdp1');
         searchdp1.setAttribute("id",'searchdp');
-        searchdad.children[0].classList.remove("searchb1");
-        searchdad.children[1].classList.remove("searcha1");
-        searchdad.children[2].classList.remove("searcha11");
+
+        let searchdad = document.getElementById('searchdad');
+        if(searchdad.getAttribute("className") ==2){
+        searchdad.children[0].setAttribute("class","searcha");
+        searchdad.children[1].setAttribute("class","searchb");
+        searchdad.children[2].setAttribute("class","searcha");
+        }else if(searchdad.getAttribute("className") ==3){
+            searchdad.children[0].setAttribute("class","searcha");
+            searchdad.children[1].setAttribute("class","searcha");
+            searchdad.children[2].setAttribute("class","searchb");
+        }else{
+            searchdad.children[0].setAttribute("class","searchb");
+            searchdad.children[1].setAttribute("class","searcha");
+            searchdad.children[2].setAttribute("class","searcha");
+        }//店铺等点击状态保存
+
+
+        let SearchTabBox1 = document.getElementsByClassName('SearchTabBox1');
         SearchTabBox1[0].setAttribute("class",'SearchTabBox');
+
+        let searchCha = document.getElementsByClassName('searchCha');
         searchCha[0].setAttribute("class",'search');
+
+        let logoTd = document.getElementsByClassName('logo-td');
         logoTd[0].style.display = "none";
+
+        let logoBd = document.getElementsByClassName('logo-bd');
         logoBd[0].style.display = "block";
+
+        let QR = document.getElementsByClassName("QR");
         QR[0].style.display = "block";
+
+        let hotsfline = document.getElementsByClassName("hotsfline");
         hotsfline[0].style.display = "block";
+
+        let naviconn = document.getElementsByClassName('naviconn');
         naviconn[0].style.display = "none";
+
+        let sline = document.getElementsByClassName('sline');
         sline[0].style.display = "none";
     };
 
+    
     if(toscrollTop >= 438.8){
+        let obj = document.getElementsByClassName('rightnav');
         obj[0].style.position = 'fixed';
         obj[0].style.top = '55px';
     }else{
+        let obj = document.getElementsByClassName('rightnav');
         obj[0].style.position = 'absolute'; 
         obj[0].style.top = '513.8px';
     };
@@ -73,122 +122,191 @@
 
     
  const qr1 = document.getElementsByClassName("qr1");
- const QR = document.getElementsByClassName("QR");
  qr1[0].onclick =function(){
+    const QR = document.getElementsByClassName("QR");
     QR[0].parentNode.removeChild(QR[0]);
- };
+ };//点击关闭二维码
+
+
  const name = document.getElementById("name");
- const laname = document.getElementsByClassName("laname");
- const hotsfline = document.getElementsByClassName("hotsfline");
  name.focus();
  name.oninput = function(){
+    const laname = document.getElementsByClassName("laname");
      if(this.Value !==""||this.value !==null){
          laname[0].style.display = "none";
      }else{
          laname[0].style.display = "block";
      }
- };
+ };//搜索栏输入默认文字状态
+
 
  const searchbb = document.getElementById("searchbb");
+searchbb.onclick = function(){
+
+ const searchbb = document.getElementById("searchbb");
+ searchbb.setAttribute("class","searchb");
+
  const searchtm = document.getElementById("searchtm");
+ searchtm.setAttribute("class","searcha");
+ 
  const searchdp = document.getElementById("searchdp");
+ searchdp.setAttribute("class","searcha");
 
  const laname2 = document.getElementById("laname2");
- const laname3 = document.getElementById("laname3");
- const sbutton = document.getElementsByClassName("sbutton");
-searchbb.onclick = function(){
- searchbb.setAttribute("class","searchb");
- searchtm.setAttribute("class","searcha");
- searchdp.setAttribute("class","searcha");
  laname2.style.display = "block";
- laname3.style.display = "block";
- hotsfline[0].style.display = "block";
- sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
-};
-searchtm.onclick = function(){
- searchbb.setAttribute("class","searcha");
- searchtm.setAttribute("class","searchb");
- searchdp.setAttribute("class","searcha");
- laname2.style.display = "none";
- laname3.style.display = "none";
- hotsfline[0].style.display = "none";
- sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff5000 0,#ff5000 100%)";
-};
-searchdp.onclick = function(){
- searchbb.setAttribute("class","searcha");
- searchtm.setAttribute("class","searcha");
- searchdp.setAttribute("class","searchb");
- laname2.style.display = "none";
- laname3.style.display = "none";
- hotsfline[0].style.display = "block";
- sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
-};
 
+ const laname3 = document.getElementById("laname3");
+ laname3.style.display = "block";
+
+ const hotsfline = document.getElementsByClassName("hotsfline");
+ hotsfline[0].style.display = "block";
+
+ const sbutton = document.getElementsByClassName("sbutton");
+ sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
+ let number =1;
+
+ let searchdad = document.getElementById("searchdad");
+ searchdad.setAttribute("className",number);
+};//点击宝贝
+
+const searchtm = document.getElementById("searchtm");
+searchtm.onclick = function(){
+
+ const searchbb = document.getElementById("searchbb");
+ searchbb.setAttribute("class","searcha");
+
+ const searchtm = document.getElementById("searchtm");
+ searchtm.setAttribute("class","searchb");
+
+ const searchdp = document.getElementById("searchdp");
+ searchdp.setAttribute("class","searcha");
+
+ const laname2 = document.getElementById("laname2");
+ laname2.style.display = "none";
+
+ const laname3 = document.getElementById("laname3");
+ laname3.style.display = "none";
+
+ const hotsfline = document.getElementsByClassName("hotsfline");
+ hotsfline[0].style.display = "none";
+
+ const sbutton = document.getElementsByClassName("sbutton");
+ sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff5000 0,#ff5000 100%)";
+ let number =2;
+
+ let searchdad = document.getElementById("searchdad");
+ searchdad.setAttribute("className",number);
+};//点击天猫
+
+const searchdp = document.getElementById("searchdp");
+searchdp.onclick = function(){
+
+ const searchbb = document.getElementById("searchbb");
+ searchbb.setAttribute("class","searcha");
+
+ const searchtm = document.getElementById("searchtm");
+ searchtm.setAttribute("class","searcha");
+
+ const searchdp = document.getElementById("searchdp");
+ searchdp.setAttribute("class","searchb");
+
+ const laname2 = document.getElementById("laname2");
+ laname2.style.display = "none";
+
+ const laname3 = document.getElementById("laname3");
+ laname3.style.display = "none";
+
+ const hotsfline = document.getElementsByClassName("hotsfline");
+ hotsfline[0].style.display = "block";
+
+ const sbutton = document.getElementsByClassName("sbutton");
+ sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
+ let number =3;
+
+ let searchdad = document.getElementById("searchdad");
+ searchdad.setAttribute("className",number);
+};//点击店铺
 /*搜索栏*/
 
+
   const location = document.getElementsByClassName('location');
-  const dropDownBox = document.getElementsByClassName('drop-down-box');
   location[0].onmouseover=function(){
+    const dropDownBox = document.getElementsByClassName('drop-down-box');
       dropDownBox[0].style.display = "block";
  };
  location[0].onmouseout=function(){
+    const dropDownBox = document.getElementsByClassName('drop-down-box');
   dropDownBox[0].style.display = "none";
  };
 
  const mytb = document.getElementsByClassName('mytb');
- const dropDownTb = document.getElementsByClassName('drop-down-tb');
  mytb[0].onmouseover = function(){
+    const dropDownTb = document.getElementsByClassName('drop-down-tb');
    dropDownTb[0].style.display = "block";
  };
  mytb[0].onmouseout = function(){
+    const dropDownTb = document.getElementsByClassName('drop-down-tb');
    dropDownTb[0].style.display = "none";
  };
 
  const myfav = document.getElementsByClassName('myfav');
- const listCate = document.getElementsByClassName('list-cate');
  myfav[0].onmouseover = function(){
+    const listCate = document.getElementsByClassName('list-cate');
   listCate[0].style.display = "block";
  };
  myfav[0].onmouseout = function(){
+    const listCate = document.getElementsByClassName('list-cate');
   listCate[0].style.display = "none";
  };
  
  const qianniu = document.getElementsByClassName('qianniu');
- const listQn = document.getElementsByClassName('list-qn');
  qianniu[0].onmouseover = function(){
+    const listQn = document.getElementsByClassName('list-qn');
   listQn[0].style.display = "block";
  };
  qianniu[0].onmouseout = function(){
+    const listQn = document.getElementsByClassName('list-qn');
   listQn[0].style.display = "none";
  };
 
  const service = document.getElementsByClassName('service');
- const listSer = document.getElementsByClassName('list-ser');
  service[0].onmouseover = function(){
+    const listSer = document.getElementsByClassName('list-ser');
   listSer[0].style.display = "block";
  };
  service[0].onmouseout = function(){
+    const listSer = document.getElementsByClassName('list-ser');
   listSer[0].style.display = "none";
  };
 
  const webnav = document.getElementsByClassName('webnav');
- const webnav1 = document.getElementsByClassName('webnav1');
  webnav[0].onmouseover = function(){
+    const webnav1 = document.getElementsByClassName('webnav1');
   webnav1[0].style.display = "block";
  };
  webnav[0].onmouseout = function(){
+    const webnav1 = document.getElementsByClassName('webnav1');
   webnav1[0].style.display = "none";
  };
+//导航栏浮动下拉菜单
+
+
  const searchbb1 = document.getElementById('searchbb1');
- const searchtm1 = document.getElementById('searchtm1');
- const searchdp1 = document.getElementById('searchdp1');
  searchbb1.onmouseover = function(){
+    const searchtm1 = document.getElementById('searchtm1');
+    const searchdp1 = document.getElementById('searchdp1');
      searchtm1.style.display = "block";
      searchdp1.style.display = "block";
  };
  searchbb1.onmouseout = function(){
+    const searchtm1 = document.getElementById('searchtm1');
+    const searchdp1 = document.getElementById('searchdp1');
      searchtm1.style.display = "none";
      searchdp1.style.display = "none";
- };/*下拉菜单*/
+ };
 
 }
+
+// localstorage      sessionstorage  页面传值
+// window对象  自定义对象   元素内自定义属性   
+// 好的 code 高耦合低内聚   模块化一下

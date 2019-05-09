@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-   
 }
 html{
     overflow-x: hidden;
@@ -81,7 +80,7 @@ top:7px;
 line-height: 35px;
     width: 74px;
     height: 39px;
-    background-color: #F4F4F4;
+background-color: #F4F4F4;
 border-top-left-radius: 18px;
 border-bottom-left-radius: 18px;
 border-left: 2px solid #FF5000;

@@ -15,6 +15,8 @@
     searchdad.children[2].style.display = "none";
 searchdad.onmouseover = function(){
     searchdad.children[1].style.display = "block";
+    let sline = document.getElementsByClassName("sline");
+    sline[1].style.display = "block";
     searchdad.children[2].style.display = "block";
  };
  searchdad.onmouseout = function(){
@@ -32,8 +34,6 @@ searchdad.onmouseover = function(){
         let naviconn = document.getElementsByClassName('naviconn');
         naviconn[0].style.display = "block";
 
-        let sline = document.getElementsByClassName('sline');
-        sline[0].style.display = "block";
 
         let searchhead = document.getElementsByTagName('header');
         searchhead[0].setAttribute("class","searchCha");
@@ -52,10 +52,17 @@ searchdad.onmouseover = function(){
         
         let laname3 = document.getElementById("laname3");
         laname3.style.paddingLeft = "260px";
-
+        let sline = document.getElementsByClassName('sline');
  
         const bb = document.getElementById("bb");
         bb.onclick = function(){
+
+          naviconn[0].style.display = "block";
+          naviconn[1].style.display = "none";
+          naviconn[2].style.display = "none";
+          sline[0].style.display = "none";
+          sline[1].style.display = "block";
+          sline[2].style.display = "none";
          const laname2 = document.getElementById("laname2");
          laname2.style.display = "block";
         
@@ -65,12 +72,13 @@ searchdad.onmouseover = function(){
          const sbutton = document.getElementsByClassName("sbutton");
          sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
 
-         let number =4;
+         let number =1;
         
          let searchdad = document.getElementById("searchdad");
          searchdad.setAttribute("className",number);
-         let searchbb1 = document.getElementsByClassName("searchbb1");
-         searchdad.insertBefore(searchbb1[0],searchdad.children[0]);
+         
+
+         searchdad.insertBefore(bb,searchdad.children[0]);
          searchdad.children[0].setAttribute("class","searchb1 searchbb1");
         searchdad.children[1].setAttribute("class","searcha1 searchtm1");
         searchdad.children[2].setAttribute("class","searcha1 searchdp1");
@@ -80,7 +88,12 @@ searchdad.onmouseover = function(){
         const tm = document.getElementById("tm");
         tm.onclick = function(){
         
-        
+          naviconn[0].style.display = "block";
+          naviconn[1].style.display = "none";
+          naviconn[2].style.display = "none";
+          sline[0].style.display = "none";
+          sline[1].style.display = "block";
+          sline[2].style.display = "none";
         
           const laname2 = document.getElementById("laname2");
           laname2.style.display = "none";
@@ -91,12 +104,13 @@ searchdad.onmouseover = function(){
           const sbutton = document.getElementsByClassName("sbutton");
           sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff5000 0,#ff5000 100%)";
  
-         let number =4;
+         let number =2;
         
          let searchdad = document.getElementById("searchdad");
          searchdad.setAttribute("className",number);
-         let searchtm1 = document.getElementsByClassName("searchtm1");
-         searchdad.insertBefore(searchtm1[0],searchdad.children[0]);
+         
+
+         searchdad.insertBefore(tm,searchdad.children[0]);
          searchdad.children[0].setAttribute("class","searchb1 searchbb1");
          searchdad.children[1].setAttribute("class","searcha1 searchtm1");
          searchdad.children[2].setAttribute("class","searcha1 searchdp1");
@@ -106,7 +120,12 @@ searchdad.onmouseover = function(){
         const dp = document.getElementById("dp");
         dp.onclick = function(){
         
-         
+          naviconn[0].style.display = "block";
+          naviconn[1].style.display = "none";
+          naviconn[2].style.display = "none";
+           sline[0].style.display = "none";
+          sline[1].style.display = "block";
+          sline[2].style.display = "none";
         
           const laname2 = document.getElementById("laname2");
           laname2.style.display = "none";
@@ -117,12 +136,13 @@ searchdad.onmouseover = function(){
           const sbutton = document.getElementsByClassName("sbutton");
           sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
 
-         let number =4;
+         let number =3;
         
          let searchdad = document.getElementById("searchdad");
          searchdad.setAttribute("className",number);
-         let searchdp1 = document.getElementsByClassName("searchdp1");
-         searchdad.insertBefore(searchdp1[0],searchdad.children[0]);
+
+        
+         searchdad.insertBefore(dp,searchdad.children[0]);
          searchdad.children[0].setAttribute("class","searchb1 searchbb1");
         searchdad.children[1].setAttribute("class","searcha1 searchtm1");
         searchdad.children[2].setAttribute("class","searcha1 searchdp1");
@@ -143,21 +163,22 @@ searchdad.onmouseover = function(){
         searchdad.onmouseout = null;
         searchdad.children[1].style.display = "block";
     searchdad.children[2].style.display = "block";
-        searchdad.children[0].setAttribute("class",'searchbb');
-        searchdad.children[1].setAttribute("class",'searchtm');
-        searchdad.children[2].setAttribute("class",'searchdp');
+
+    const bb = document.getElementById("bb");
+    const tm = document.getElementById("tm");
+    const dp = document.getElementById("dp");
         if(searchdad.getAttribute("className") ==2){
-        searchdad.children[0].setAttribute("class","searcha searchbb");
-        searchdad.children[1].setAttribute("class","searchb searchtm");
-        searchdad.children[2].setAttribute("class","searcha searchdp");
+        bb.setAttribute("class","searcha");
+        tm.setAttribute("class","searchb");
+        dp.setAttribute("class","searcha");
         }else if(searchdad.getAttribute("className") ==3){
-            searchdad.children[0].setAttribute("class","searcha searchbb");
-            searchdad.children[1].setAttribute("class","searcha searchtm");
-            searchdad.children[2].setAttribute("class","searchb searchdp");
+            bb.setAttribute("class","searcha");
+            tm.setAttribute("class","searcha");
+            dp.setAttribute("class","searchb");
         }else{
-            searchdad.children[0].setAttribute("class","searchb searchbb");
-            searchdad.children[1].setAttribute("class","searcha searchtm");
-            searchdad.children[2].setAttribute("class","searcha searchdp");
+            bb.setAttribute("class","searchb");
+            tm.setAttribute("class","searcha");
+            dp.setAttribute("class","searcha");
         }//店铺等点击状态保存
 
 
@@ -189,7 +210,7 @@ searchdad.onmouseover = function(){
         let laname3 = document.getElementById("laname3");
         laname3.style.paddingLeft = "275px";
 
-        const bb = document.getElementById("bb");
+        
         bb.onclick = function(){
           const laname2 = document.getElementById("laname2");
           laname2.style.display = "block";
@@ -203,24 +224,22 @@ searchdad.onmouseover = function(){
           const sbutton = document.getElementsByClassName("sbutton");
           sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
         
-         const searchbb = document.getElementsByClassName("searchbb");
-         searchbb[0].setAttribute("class","searchb searchbb");
-        
-         const searchtm = document.getElementsByClassName("searchtm");
-         searchtm[0].setAttribute("class","searcha searchtm");
-         
-         const searchdp = document.getElementsByClassName("searchdp");
-         searchdp[0].setAttribute("class","searcha searchdp");
-        
          
          let number =1;
         
          let searchdad = document.getElementById("searchdad");
          searchdad.setAttribute("className",number);
+         bb.setAttribute("class","searchb");
+        
+         
+         tm.setAttribute("class","searcha");
+         
+         
+         dp.setAttribute("class","searcha");
         };//点击宝贝
         
 
-        const tm = document.getElementById("tm");
+        
         tm.onclick = function(){
 
           const laname2 = document.getElementById("laname2");
@@ -235,23 +254,23 @@ searchdad.onmouseover = function(){
           const sbutton = document.getElementsByClassName("sbutton");
           sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff5000 0,#ff5000 100%)";
        
-         const searchbb = document.getElementsByClassName("searchbb");
-         searchbb[0].setAttribute("class","searcha searchbb");
-        
-         const searchtm = document.getElementsByClassName("searchtm");
-         searchtm[0].setAttribute("class","searchb searchtm");
-        
-         const searchdp = document.getElementsByClassName("searchdp");
-         searchdp[0].setAttribute("class","searcha searchdp");
         
         
          let number =2;
          let searchdad = document.getElementById("searchdad");
          searchdad.setAttribute("className",number);
+
+         bb.setAttribute("class","searcha");
+        
+         
+         tm.setAttribute("class","searchb");
+         
+         
+         dp.setAttribute("class","searcha");
         };//点击天猫
         
 
-        const dp = document.getElementById("dp");
+        
         dp.onclick = function(){
         
           const laname2 = document.getElementById("laname2");
@@ -266,20 +285,20 @@ searchdad.onmouseover = function(){
          const sbutton = document.getElementsByClassName("sbutton");
          sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
         
-         const searchbb = document.getElementsByClassName("searchbb");
-         searchbb[0].setAttribute("class","searcha searchbb");
-        
-         const searchtm = document.getElementsByClassName("searchtm");
-         searchtm[0].setAttribute("class","searcha searchtm");
-        
-         const searchdp = document.getElementsByClassName("searchdp");
-         searchdp[0].setAttribute("class","searchb searchdp");
         
         
          let number =3;
         
          let searchdad = document.getElementById("searchdad");
          searchdad.setAttribute("className",number);
+
+         bb.setAttribute("class","searcha");
+        
+         
+         tm.setAttribute("class","searcha");
+         
+         
+         dp.setAttribute("class","searchb");
         };//点击店铺
     };
 

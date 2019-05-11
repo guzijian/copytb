@@ -18,7 +18,9 @@ a{
     margin: 0 auto;
     max-width: 1190px;
 }
-
+nav{
+    border-bottom: 1px solid #EEEEEE;
+}
 
 .rightnav{
     position: absolute;
@@ -68,14 +70,17 @@ form{
 }
 .naviconn,.sline{
     display: none;
+    position: absolute;
+left: 55px;
+top: 0;
 }
 .SearchTabBox1 ul{
 
 }
-#searchbb1{
+.searchbb1{
+    cursor: default;
     z-index: 2;
     position: absolute;
-left: 382px;
 top:7px;
 line-height: 35px;
     width: 74px;
@@ -88,11 +93,10 @@ border-top: 2px solid #FF5000;
 border-bottom: 2px solid #FF5000;
 }
 
-#searchtm1{
+.searchtm1{
     z-index: 1;
     position: absolute;
     top: 30px;
-    left: 382px;
     line-height: 5.5;
     background-color: #F4F4F4;
     width: 74px;
@@ -106,15 +110,15 @@ bottom: 3px;
 left: 7px;
 width: 60px;
 height: 1px;
+margin-top: 48px;
 background: #ffa4a4;
 z-index: 1;
 }
-#searchdp1{
+.searchdp1{
     z-index: 1;
     position: absolute;
     line-height: 3;
     top: 80px;
-    left: 382px;
     background-color: #F4F4F4;
     width: 74px;
     height: 40px;
@@ -185,7 +189,7 @@ z-index: 1;
     padding-top: 7px;
 }
 #laname11{
-    padding-left: 170px;
+    padding-left: 120px;
     padding-top: 5px;
     }
    
@@ -196,10 +200,11 @@ padding-top: 5px;
 #laname2{
     padding-left: 10px;
     padding-top: 5px;
+    min-width: 200px;
 }
 #laname3{
     padding-top: 1px;
-    padding-left: 390px;
+    padding-left: 275px;
 }
 #name{
     min-width: 551.4px;
@@ -217,7 +222,7 @@ padding-top: 5px;
     width: 589px;
     height: 18px;
     margin-left: 85px;
-    margin-top: 5px;
+    margin-top: 1px;
 }
 .hotsfline1 a{
     color: #505050;
@@ -278,7 +283,7 @@ margin-left: -15px;
 }
 /*搜索栏 右导航栏*/
 @font-face {
-    font-family: 'iconfont1';
+    font-family: 'iconfont';
     src: url('./images/font_2gqy0ghw9mo/iconfont.eot');
     src: url('./images/font_2gqy0ghw9mo/iconfont.eot?#iefix') format('embedded-opentype'),
         url('./images/font_2gqy0ghw9mo/iconfont.woff2') format('woff2'),
@@ -302,9 +307,7 @@ margin-left: -15px;
 .font3:hover{
     color: #FF5000;
 }
-.font4{
-    
-}
+
 /*字体*/
 .location:hover,.mytb:hover,.myfav:hover,.qianniu:hover,.service:hover,.webnav:hover{
     background-color: white;
@@ -338,7 +341,7 @@ nav{
     z-index: 999;
     display: none;
     padding-top: 0;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-left: -1px;
 }
 .drop-down-list{
@@ -362,16 +365,7 @@ nav{
 .drop-down-list li:hover{
 background-color: #f5f5f5;
 }
-.navicon img{
-    margin-left: 5px;
-   position: relative;
-   top: 0;
-}
-.naviconn img{
-    left: 20px;
-position: relative;
-top: -35px;
-}
+
 .login-register{
 width: 134px;
 height: 35px;
@@ -399,7 +393,7 @@ height: 35px;
     z-index: 999;
     display: none;
     padding-top: 0;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-left: -1px;
 }
 .down-list-tb{
@@ -436,9 +430,17 @@ height: 35px;
 width: 84px;
 height: 35px;
 }
-.favorite {
-    font-family: "iconfont1";
-    font-size: 12px;
+.navicon {
+    font-family: "iconfont" !important;
+    font-size: 8px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #9C9DA9;
+  }
+  .favorite {
+    font-family: "iconfont" !important;
+    font-size: 10px;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -448,7 +450,7 @@ height: 35px;
     z-index: 999;
     display: none;
     padding-top: 0;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-left: -1px;
   }
   .ul-cate{
@@ -492,7 +494,7 @@ height: 35px;
     z-index: 999;
     display: none;
     padding-top: 0;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-left: -1px;
   }
   .ul-qn{
@@ -526,7 +528,7 @@ height: 35px;
     z-index: 999;
     display: none;
     padding-top: 0;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-left: -1px;
   }
   .ul-ser{
@@ -559,7 +561,7 @@ height: 35px;
     z-index: 999;
     display: flex;
     padding-top: 0;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-left: -1px;
     right: 127.4px;
     width: 1189.6px;

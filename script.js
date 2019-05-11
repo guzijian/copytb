@@ -4,7 +4,7 @@
     let toscrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if(toscrollTop >= 156.8){
         let name = document.getElementById('name');
-        name.style.paddingLeft = '84px';
+        name.style.paddingLeft = '34px';
 
         let laname = document.getElementsByClassName('laname');
         laname[0].children[0].setAttribute("id",'laname11');
@@ -21,12 +21,10 @@ searchdad.onmouseover = function(){
     searchdad.children[1].style.display = "none";
     searchdad.children[2].style.display = "none";
  };
-        searchdad.children[0].setAttribute("id",'searchbb1');
-        searchdad.children[1].setAttribute("id",'searchtm1');
-        searchdad.children[2].setAttribute("id",'searchdp1');
-        searchdad.children[0].setAttribute("class","searchb1");
-        searchdad.children[1].setAttribute("class","searcha1");
-        searchdad.children[2].setAttribute("class","searcha1");
+        
+        searchdad.children[0].setAttribute("class","searchb1 searchbb1");
+        searchdad.children[1].setAttribute("class","searcha1 searchtm1");
+        searchdad.children[2].setAttribute("class","searcha1 searchdp1");
         
         let searchbox = document.getElementsByClassName('searchbox');
         searchbox[0].children[0].setAttribute("class",'SearchTabBox1');
@@ -51,8 +49,84 @@ searchdad.onmouseover = function(){
 
         let hotsfline = document.getElementsByClassName("hotsfline");
         hotsfline[0].style.display = "none";
-
         
+        let laname3 = document.getElementById("laname3");
+        laname3.style.paddingLeft = "260px";
+
+ 
+        const bb = document.getElementById("bb");
+        bb.onclick = function(){
+         const laname2 = document.getElementById("laname2");
+         laname2.style.display = "block";
+        
+         const laname3 = document.getElementById("laname3");
+         laname3.style.display = "block";
+        
+         const sbutton = document.getElementsByClassName("sbutton");
+         sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
+
+         let number =4;
+        
+         let searchdad = document.getElementById("searchdad");
+         searchdad.setAttribute("className",number);
+         let searchbb1 = document.getElementsByClassName("searchbb1");
+         searchdad.insertBefore(searchbb1[0],searchdad.children[0]);
+         searchdad.children[0].setAttribute("class","searchb1 searchbb1");
+        searchdad.children[1].setAttribute("class","searcha1 searchtm1");
+        searchdad.children[2].setAttribute("class","searcha1 searchdp1");
+        };//点击宝贝
+        
+
+        const tm = document.getElementById("tm");
+        tm.onclick = function(){
+        
+        
+        
+          const laname2 = document.getElementById("laname2");
+          laname2.style.display = "none";
+         
+          const laname3 = document.getElementById("laname3");
+          laname3.style.display = "none";
+         
+          const sbutton = document.getElementsByClassName("sbutton");
+          sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff5000 0,#ff5000 100%)";
+ 
+         let number =4;
+        
+         let searchdad = document.getElementById("searchdad");
+         searchdad.setAttribute("className",number);
+         let searchtm1 = document.getElementsByClassName("searchtm1");
+         searchdad.insertBefore(searchtm1[0],searchdad.children[0]);
+         searchdad.children[0].setAttribute("class","searchb1 searchbb1");
+         searchdad.children[1].setAttribute("class","searcha1 searchtm1");
+         searchdad.children[2].setAttribute("class","searcha1 searchdp1");
+        };//点击天猫
+        
+
+        const dp = document.getElementById("dp");
+        dp.onclick = function(){
+        
+         
+        
+          const laname2 = document.getElementById("laname2");
+          laname2.style.display = "none";
+         
+          const laname3 = document.getElementById("laname3");
+          laname3.style.display = "none";
+         
+          const sbutton = document.getElementsByClassName("sbutton");
+          sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
+
+         let number =4;
+        
+         let searchdad = document.getElementById("searchdad");
+         searchdad.setAttribute("className",number);
+         let searchdp1 = document.getElementsByClassName("searchdp1");
+         searchdad.insertBefore(searchdp1[0],searchdad.children[0]);
+         searchdad.children[0].setAttribute("class","searchb1 searchbb1");
+        searchdad.children[1].setAttribute("class","searcha1 searchtm1");
+        searchdad.children[2].setAttribute("class","searcha1 searchdp1");
+        };//点击店铺
 
     }else{
 
@@ -69,21 +143,21 @@ searchdad.onmouseover = function(){
         searchdad.onmouseout = null;
         searchdad.children[1].style.display = "block";
     searchdad.children[2].style.display = "block";
-        searchdad.children[0].setAttribute("id",'searchbb');
-        searchdad.children[1].setAttribute("id",'searchtm');
-        searchdad.children[2].setAttribute("id",'searchdp');
+        searchdad.children[0].setAttribute("class",'searchbb');
+        searchdad.children[1].setAttribute("class",'searchtm');
+        searchdad.children[2].setAttribute("class",'searchdp');
         if(searchdad.getAttribute("className") ==2){
-        searchdad.children[0].setAttribute("class","searcha");
-        searchdad.children[1].setAttribute("class","searchb");
-        searchdad.children[2].setAttribute("class","searcha");
+        searchdad.children[0].setAttribute("class","searcha searchbb");
+        searchdad.children[1].setAttribute("class","searchb searchtm");
+        searchdad.children[2].setAttribute("class","searcha searchdp");
         }else if(searchdad.getAttribute("className") ==3){
-            searchdad.children[0].setAttribute("class","searcha");
-            searchdad.children[1].setAttribute("class","searcha");
-            searchdad.children[2].setAttribute("class","searchb");
+            searchdad.children[0].setAttribute("class","searcha searchbb");
+            searchdad.children[1].setAttribute("class","searcha searchtm");
+            searchdad.children[2].setAttribute("class","searchb searchdp");
         }else{
-            searchdad.children[0].setAttribute("class","searchb");
-            searchdad.children[1].setAttribute("class","searcha");
-            searchdad.children[2].setAttribute("class","searcha");
+            searchdad.children[0].setAttribute("class","searchb searchbb");
+            searchdad.children[1].setAttribute("class","searcha searchtm");
+            searchdad.children[2].setAttribute("class","searcha searchdp");
         }//店铺等点击状态保存
 
 
@@ -110,6 +184,103 @@ searchdad.onmouseover = function(){
 
         let sline = document.getElementsByClassName('sline');
         sline[0].style.display = "none";
+
+
+        let laname3 = document.getElementById("laname3");
+        laname3.style.paddingLeft = "275px";
+
+        const bb = document.getElementById("bb");
+        bb.onclick = function(){
+          const laname2 = document.getElementById("laname2");
+          laname2.style.display = "block";
+         
+          const laname3 = document.getElementById("laname3");
+          laname3.style.display = "block";
+         
+          const hotsfline = document.getElementsByClassName("hotsfline");
+          hotsfline[0].style.display = "block";
+         
+          const sbutton = document.getElementsByClassName("sbutton");
+          sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
+        
+         const searchbb = document.getElementsByClassName("searchbb");
+         searchbb[0].setAttribute("class","searchb searchbb");
+        
+         const searchtm = document.getElementsByClassName("searchtm");
+         searchtm[0].setAttribute("class","searcha searchtm");
+         
+         const searchdp = document.getElementsByClassName("searchdp");
+         searchdp[0].setAttribute("class","searcha searchdp");
+        
+         
+         let number =1;
+        
+         let searchdad = document.getElementById("searchdad");
+         searchdad.setAttribute("className",number);
+        };//点击宝贝
+        
+
+        const tm = document.getElementById("tm");
+        tm.onclick = function(){
+
+          const laname2 = document.getElementById("laname2");
+          laname2.style.display = "none";
+         
+          const laname3 = document.getElementById("laname3");
+          laname3.style.display = "none";
+         
+          const hotsfline = document.getElementsByClassName("hotsfline");
+          hotsfline[0].style.display = "none";
+         
+          const sbutton = document.getElementsByClassName("sbutton");
+          sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff5000 0,#ff5000 100%)";
+       
+         const searchbb = document.getElementsByClassName("searchbb");
+         searchbb[0].setAttribute("class","searcha searchbb");
+        
+         const searchtm = document.getElementsByClassName("searchtm");
+         searchtm[0].setAttribute("class","searchb searchtm");
+        
+         const searchdp = document.getElementsByClassName("searchdp");
+         searchdp[0].setAttribute("class","searcha searchdp");
+        
+        
+         let number =2;
+         let searchdad = document.getElementById("searchdad");
+         searchdad.setAttribute("className",number);
+        };//点击天猫
+        
+
+        const dp = document.getElementById("dp");
+        dp.onclick = function(){
+        
+          const laname2 = document.getElementById("laname2");
+         laname2.style.display = "none";
+        
+         const laname3 = document.getElementById("laname3");
+         laname3.style.display = "none";
+        
+         const hotsfline = document.getElementsByClassName("hotsfline");
+         hotsfline[0].style.display = "block";
+        
+         const sbutton = document.getElementsByClassName("sbutton");
+         sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
+        
+         const searchbb = document.getElementsByClassName("searchbb");
+         searchbb[0].setAttribute("class","searcha searchbb");
+        
+         const searchtm = document.getElementsByClassName("searchtm");
+         searchtm[0].setAttribute("class","searcha searchtm");
+        
+         const searchdp = document.getElementsByClassName("searchdp");
+         searchdp[0].setAttribute("class","searchb searchdp");
+        
+        
+         let number =3;
+        
+         let searchdad = document.getElementById("searchdad");
+         searchdad.setAttribute("className",number);
+        };//点击店铺
     };
 
     
@@ -129,6 +300,98 @@ searchdad.onmouseover = function(){
 
    window.onload= function () {
 
+    const bb = document.getElementById("bb");
+    bb.onclick = function(){
+      const laname2 = document.getElementById("laname2");
+      laname2.style.display = "block";
+     
+      const laname3 = document.getElementById("laname3");
+      laname3.style.display = "block";
+     
+      const hotsfline = document.getElementsByClassName("hotsfline");
+      hotsfline[0].style.display = "block";
+     
+      const sbutton = document.getElementsByClassName("sbutton");
+      sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
+    
+     const searchbb = document.getElementsByClassName("searchbb");
+     searchbb[0].setAttribute("class","searchb searchbb");
+    
+     const searchtm = document.getElementsByClassName("searchtm");
+     searchtm[0].setAttribute("class","searcha searchtm");
+     
+     const searchdp = document.getElementsByClassName("searchdp");
+     searchdp[0].setAttribute("class","searcha searchdp");
+    
+     
+     let number =1;
+    
+     let searchdad = document.getElementById("searchdad");
+     searchdad.setAttribute("className",number);
+    };//点击宝贝
+    
+
+    const tm = document.getElementById("tm");
+    tm.onclick = function(){
+
+      const laname2 = document.getElementById("laname2");
+      laname2.style.display = "none";
+     
+      const laname3 = document.getElementById("laname3");
+      laname3.style.display = "none";
+     
+      const hotsfline = document.getElementsByClassName("hotsfline");
+      hotsfline[0].style.display = "none";
+     
+      const sbutton = document.getElementsByClassName("sbutton");
+      sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff5000 0,#ff5000 100%)";
+    
+     const searchbb = document.getElementsByClassName("searchbb");
+     searchbb[0].setAttribute("class","searcha searchbb");
+    
+     const searchtm = document.getElementsByClassName("searchtm");
+     searchtm[0].setAttribute("class","searchb searchtm");
+    
+     const searchdp = document.getElementsByClassName("searchdp");
+     searchdp[0].setAttribute("class","searcha searchdp");
+    
+    
+     let number =2;
+     
+     searchdad.setAttribute("className",number);
+    };//点击天猫
+    
+
+    const dp = document.getElementById("dp");
+    dp.onclick = function(){
+    
+      const laname2 = document.getElementById("laname2");
+     laname2.style.display = "none";
+    
+     const laname3 = document.getElementById("laname3");
+     laname3.style.display = "none";
+    
+     const hotsfline = document.getElementsByClassName("hotsfline");
+     hotsfline[0].style.display = "block";
+    
+     const sbutton = document.getElementsByClassName("sbutton");
+     sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
+    
+     const searchbb = document.getElementsByClassName("searchbb");
+     searchbb[0].setAttribute("class","searcha searchbb");
+    
+     const searchtm = document.getElementsByClassName("searchtm");
+     searchtm[0].setAttribute("class","searcha searchtm");
+    
+     const searchdp = document.getElementsByClassName("searchdp");
+     searchdp[0].setAttribute("class","searchb searchdp");
+    
+    
+     let number =3;
+    
+     let searchdad = document.getElementById("searchdad");
+     searchdad.setAttribute("className",number);
+    };//点击店铺
     
  const qr1 = document.getElementsByClassName("qr1");
  qr1[0].onclick =function(){
@@ -149,90 +412,7 @@ searchdad.onmouseover = function(){
  };//搜索栏输入默认文字状态
 
 
- const searchbb = document.getElementById("searchbb");
-searchbb.onclick = function(){
 
- const searchbb = document.getElementById("searchbb");
- searchbb.setAttribute("class","searchb");
-
- const searchtm = document.getElementById("searchtm");
- searchtm.setAttribute("class","searcha");
- 
- const searchdp = document.getElementById("searchdp");
- searchdp.setAttribute("class","searcha");
-
- const laname2 = document.getElementById("laname2");
- laname2.style.display = "block";
-
- const laname3 = document.getElementById("laname3");
- laname3.style.display = "block";
-
- const hotsfline = document.getElementsByClassName("hotsfline");
- hotsfline[0].style.display = "block";
-
- const sbutton = document.getElementsByClassName("sbutton");
- sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
- let number =1;
-
- let searchdad = document.getElementById("searchdad");
- searchdad.setAttribute("className",number);
-};//点击宝贝
-
-const searchtm = document.getElementById("searchtm");
-searchtm.onclick = function(){
-
- const searchbb = document.getElementById("searchbb");
- searchbb.setAttribute("class","searcha");
-
- const searchtm = document.getElementById("searchtm");
- searchtm.setAttribute("class","searchb");
-
- const searchdp = document.getElementById("searchdp");
- searchdp.setAttribute("class","searcha");
-
- const laname2 = document.getElementById("laname2");
- laname2.style.display = "none";
-
- const laname3 = document.getElementById("laname3");
- laname3.style.display = "none";
-
- const hotsfline = document.getElementsByClassName("hotsfline");
- hotsfline[0].style.display = "none";
-
- const sbutton = document.getElementsByClassName("sbutton");
- sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff5000 0,#ff5000 100%)";
- let number =2;
- searchdad.setAttribute("className",number);
-};//点击天猫
-
-const searchdp = document.getElementById("searchdp");
-searchdp.onclick = function(){
-
- const searchbb = document.getElementById("searchbb");
- searchbb.setAttribute("class","searcha");
-
- const searchtm = document.getElementById("searchtm");
- searchtm.setAttribute("class","searcha");
-
- const searchdp = document.getElementById("searchdp");
- searchdp.setAttribute("class","searchb");
-
- const laname2 = document.getElementById("laname2");
- laname2.style.display = "none";
-
- const laname3 = document.getElementById("laname3");
- laname3.style.display = "none";
-
- const hotsfline = document.getElementsByClassName("hotsfline");
- hotsfline[0].style.display = "block";
-
- const sbutton = document.getElementsByClassName("sbutton");
- sbutton[0].style.backgroundImage = "linear-gradient(to right,#ff9000 0,#ff5000 100%)";
- let number =3;
-
- let searchdad = document.getElementById("searchdad");
- searchdad.setAttribute("className",number);
-};//点击店铺
 /*搜索栏*/
 
 
@@ -297,11 +477,7 @@ searchdp.onclick = function(){
  };
 //导航栏浮动下拉菜单
 
-let searchdad = document.getElementById('searchdad');
-if(searchdad.getAttribute("classn") ==1){
-    console.log("哈哈哈");
 
-};
 }
 
 // localstorage      sessionstorage  页面传值

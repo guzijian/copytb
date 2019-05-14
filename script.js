@@ -2,6 +2,7 @@
     window.onscroll = function(){
  
     let toscrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    console.log(toscrollTop);
     if(toscrollTop >= 156.8){
         let name = document.getElementById('name');
         name.style.paddingLeft = '34px';
@@ -52,7 +53,6 @@ searchdad.onmouseover = function(){
         
         let laname3 = document.getElementById("laname3");
         laname3.style.paddingLeft = "260px";
-        let sline = document.getElementsByClassName('sline');
  
         const bb = document.getElementById("bb");
         bb.onclick = function(){
@@ -318,10 +318,16 @@ searchdad.onmouseover = function(){
         let obj = document.getElementsByClassName('rightnav');
         obj[0].style.position = 'fixed';
         obj[0].style.top = '55px';
+
+        let fixedtool7 = document.getElementsByClassName("fixedtool-7");
+        fixedtool7[0].style.display = "block";
     }else{
         let obj = document.getElementsByClassName('rightnav');
         obj[0].style.position = 'absolute'; 
         obj[0].style.top = '513.8px';
+
+        let fixedtool7 = document.getElementsByClassName("fixedtool-7");
+        fixedtool7[0].style.display = "none";
     };
 
     }
@@ -441,8 +447,63 @@ searchdad.onmouseover = function(){
      }
  };//搜索栏输入默认文字状态
 
+ let timer = null;
+function animations(scrollTop){
+  let osTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if(scrollTop < osTop){
+    let ispeed = Math.floor(osTop-osTop / 10);
+    window.scrollTo(scrollTop,ispeed);
+    if(scrollTop >= ispeed){
+      window.scrollTo(scrollTop,scrollTop);
+      clearInterval(timer);
+    };
+  }else if(scrollTop > osTop){
+    let ispeed = Math.floor(osTop+osTop / 10);
+    window.scrollTo(scrollTop,ispeed);
+    if(scrollTop <= ispeed){
+      window.scrollTo(scrollTop,scrollTop);
+      clearInterval(timer);
+    };
+  };
+  
+};
+const fixedtool1 = document.getElementsByClassName("fixedtool-1");
+fixedtool1[0].onclick = function(){
+ timer = setInterval(function(){animations(640)},30);
+};
+const fixedtool3 =document.getElementsByClassName("fixedtool-3");
+fixedtool3[0].onclick = function(){
+  timer = setInterval(function(){animations(2220)},30);
+};
+const fixedtool4 =document.getElementsByClassName("fixedtool-4");
+fixedtool4[0].onclick = function(){
+  timer = setInterval(function(){animations(2540)},30);
+};
+const fixedtool5 =document.getElementsByClassName("fixedtool-5");
+fixedtool5[0].onclick = function(){
+  timer = setInterval(function(){animations(3320)},30);
+};
+const fixedtool6 =document.getElementsByClassName("fixedtool-6");
+fixedtool6[0].onclick = function(){
+  timer = setInterval(function(){animations(4555)},30);
+};
+const fixedtool7 =document.getElementsByClassName("fixedtool-7");
+fixedtool7[0].onclick = function(){
 
-
+  let timer = null;
+  clearInterval(timer);
+  timer = setInterval(function(){
+    //获取滚动条距离顶部高度
+    let osTop = document.documentElement.scrollTop || document.body.scrollTop;
+    let ispeed = Math.floor(osTop-osTop / 7);
+    window.scrollTo(0,ispeed);
+    //到达顶部，清除定时器
+    if (ispeed == 0) {
+      
+    clearInterval(timer);
+    };
+    },30);
+};
 /*搜索栏*/
 
 

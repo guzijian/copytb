@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    /*border: 1px solid blue;*/
 }
 html{
     overflow-x: hidden;
@@ -7,6 +8,7 @@ html{
 body{
     margin: 0;
    background-color: #F4F4F4;
+
 }
 li{
     list-style-type: none;
@@ -22,14 +24,7 @@ nav{
     border-bottom: 1px solid #EEEEEE;
 }
 
-.rightnav{
-    position: absolute;
-    top:513.8px;
-    right: 50%;
-    margin-right: -655px;
-    width: 50px;
-    height: 436px;
-}
+
 
 .search{
     height: 121px;
@@ -74,9 +69,7 @@ form{
 left: 55px;
 top: 0;
 }
-.SearchTabBox1 ul{
 
-}
 .searchbb1{
     cursor: default;
     z-index: 2;
@@ -446,6 +439,7 @@ height: 35px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  
   .list-cate{
     position: absolute;
     z-index: 999;
@@ -659,7 +653,87 @@ height: 35px;
     margin-left: 5px;
     position: relative;
     top: 0;
+}/*顶部*/
+
+.rightnav{
+    position: absolute;
+    top:513.8px;
+    right: 50%;
+    margin-right: -655px;
+    width: 50px;
+
+    margin-top: 25px;
 }
+.rightnav a::after{
+    content: '';
+border-bottom: 1px solid #efefef;
+width: 34px;
+position: absolute;
+left: 8px;
+padding-top: 25px;
+z-index: 1;
+}
+.wangwang{
+   position: absolute;
+   top: -20px;
+   left: 6px;
+   width: 36px;
+}
+
+
+.a-all{
+    background-color: white;
+    display: block;
+    width: 50px;
+    height: 50px;
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+   text-align: center;
+   padding-top: 15%;
+   transition: all .2s;
+   position: relative;
+}
+.a-all:hover{
+    background-image: linear-gradient(135deg,#ff971b,#ff5000);
+    color: white;
+    font-weight: 900;
+    z-index: 2;
+}
+
+.fixedtool-1{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-image: linear-gradient(135deg,#ff971b,#ff5000);
+    color: white;
+    font-weight: 900;
+}
+.fixedtool-3{
+    color: #FF006B;
+}
+.fixedtool-4{
+    color: #9686FB;
+}
+.fixedtool-5{
+    color:#ABC32A;
+}
+.fixedtool-6{
+    color: #FF4400;
+}
+.fixedtool-7{
+    display: none;
+    padding-top: 14%;
+    color: black;
+}
+.fixedtool-8{
+    padding-top: 50%;
+    color: black;
+    line-height: 5px;
+}
+.fixedtool-9{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: black;
+}
+
 /*导航栏*/
 
 
